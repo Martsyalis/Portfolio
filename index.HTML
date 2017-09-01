@@ -5,62 +5,76 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> My Portfolio </title>
-    <!-- <link rel="stylesheet" href="./vendor/styles/normalize.css">
+    <link rel="stylesheet" href="./vendor/styles/normalize.css">
     <link rel="stylesheet" href="./styles/base.css">
-    <link rel="stylesheet" href="./styles/icons.css">
+    <!-- <link rel="stylesheet" href="./styles/icons.css"> -->
     <link rel="stylesheet" href="./styles/layout.css">
-    <link rel="stylesheet" href="./styles/modules.css">
-    <link `href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="./styles/modules.css"> -->
+    <link `href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> 
   </head>
 
   <body>
+
+
+
 
             <!--    Navigation      -->
 
     <nav class="main-nav">
       <ul class="nav-ul">
-        <li> <h5><a href="index.html">Home</a></h5> </li>
-        <li> <h5><a href="social.html">Social</a></h5> </li>
-        <li> <h5><a href="contact.html">Contacts</a></h5> </li>
+          <li> <h3 class ="tab" data-tab="home">Home</h3>
+          <li> <h3 class ="tab" data-tab="about">About</h3> </li>
+        <li> <h3><a href="social.html">Social</a></h3> </li>
+        <li> <h3><a href="#footer">GitHub</a></h3> </li>
       </ul>
     </nav>
 
 
-            <!--     Title        -->
 
-    <section class="main">
-      <div class="row">
-        <div class="box">
-          <a class="hero" href="survey.html">
-            <h1 class="main-title">Welcome!</h1>
-            <h3></h3>
-          </a>
+     <!--     Home        -->
+    <section class="home tab-hide" data-tab="home">
+      <section class="main">
+        <div class="row">
+          <div class="box">
+            <a class="hero" href="survey.html">
+              <h1 class="main-title">Welcome!</h1>
+              <h3></h3>
+            </a>
+          </div>
         </div>
-      </div>
+      </section>
+            
+      <!--     Project-template        -->
+      <section class="project-template">
+        <a class="project-url" href:"">
+          <img class="project-screenshot" src="" />
+          <div class="wrapper>">
+              <div class="project-title"></div>
+              <div class="project-date"></div>
+              <div class="project-description"></div>
+          </div>
+        </a>
+        <a class="id" href=""><button>Next</button></a>
+      </section>
+
+    </section>
+
+ <!--     About        -->
+    <section class="tab-hide about" data-tab="about">
+      <p>Im Maryus</p>
     </section>
 
 
-    <section class="project-template">
-        <img class="project-screenshot" src="" />
-        <div class="wrapper>">
-            <div class="project-title"></div>
-            <div class="project-date"></div>
-            <div class="project-description"></div>
-        </div>
-    </section>
 
-
-
-
-
-    <footer>
-     
+    <footer id="footer">
+     <p> footer!</p>
     </footer>
 
 
     <!--  Scripts -->
     <script type="text/javascript" src="./scripts/data.js"></script>
     <script type="text/javascript" src="./vendor/jquery-3.2.1copy.js"></script>
+    <script type="text/javascript" src="./scripts/indexView.js"></script>
     <script type="text/javascript" src="./scripts/constructor.js"></script>
 
   </body>

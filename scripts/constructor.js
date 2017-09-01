@@ -3,14 +3,6 @@
 
 var projectsArray = [];
 
-var dataArray = [
-  {
-    title : 'Motorcycle website',
-    date : '08.26.2017',
-    screenShot: './pics/sv.jpg'
-
-  } 
-]
 
 console.log('data array',dataArray);
 
@@ -18,16 +10,19 @@ function Project (dataArray) {
   this.title = dataArray.title;
   this.date = dataArray.date;
   this.screenShot = dataArray.screenShot;
+  this.id = dataArray.title;
 }
 
 Project.prototype.toScript = function() {
   var $newProject = $('.project-template').clone();
   $newProject.removeClass('project-template');
-
+  $newProject.addClass('generated-project');
   $newProject.find('img').attr('src',this.screenShot);
   $newProject.find('.project-title').text(this.title);
   $newProject.find('.project-date').text(this.date);
   $newProject.find('.project-description').text(this.description);
+  $newProject.find('.project-id').attr('data-id','"'+this.id+'"')
+  //console.log("new project",$newProject);
   return $newProject;
 };
 
@@ -36,11 +31,11 @@ dataArray.forEach(function (projectObject){
   projectsArray.push(new Project(projectObject));
 
 });
-console.log('projects array',projectsArray);
+//console.log('projects array',projectsArray);
 
 projectsArray.forEach(function (Project){
-  $('.project-template').append(Project.toScript());
-  console.log('project',Project);
+  $('.home').append(Project.toScript());
+  //console.log('project',Project);
 
 });
 
