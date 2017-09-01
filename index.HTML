@@ -7,11 +7,30 @@
     <title> My Portfolio </title>
     <link rel="stylesheet" href="./vendor/styles/normalize.css">
     <link rel="stylesheet" href="./styles/base.css">
-    <!-- <link rel="stylesheet" href="./styles/icons.css"> -->
     <link rel="stylesheet" href="./styles/layout.css">
-    <!-- <link rel="stylesheet" href="./styles/modules.css"> -->
     <link `href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> 
+
+
+    <!--            Project Template            -->
+
+    <script id="project-template" data-type="home"  type="text/x-handlebars-template">
+      <section class="project-template" id={{id}}>
+        <a class="project-url" href="{{projectUrl}}">
+          <img class="project-screenshot" src='{{screenShot}}' />
+          <div class="wrapper>">
+              <div class="project-title">{{title}}</div>
+              <div class="project-date">{{date}}</div>
+              <div class="project-description">{{description}}</div>
+          </div>
+        </a>
+        <a class="next-button" href="#{{nextId}}">Next</a>
+      </section>
+    </script>
+
   </head>
+
+
+
 
   <body>
 
@@ -32,7 +51,7 @@
 
 
      <!--     Home        -->
-    <section class="home tab-hide" data-tab="home">
+    <section class="home tab-hide" id="home-projects" data-tab="home">
       <section class="main">
         <div class="row">
           <div class="box">
@@ -43,21 +62,8 @@
           </div>
         </div>
       </section>
-            
-      <!--     Project-template        -->
-      <section class="project-template">
-        <a class="project-url" href="http://martsyalis.github.io">
-          <img class="project-screenshot" src="" />
-          <div class="wrapper>">
-              <div class="project-title"></div>
-              <div class="project-date"></div>
-              <div class="project-description"></div>
-          </div>
-        </a>
-        <a class="id" href="">Next</a>
-      </section>
-
-    </section>
+    </section>       
+      
 
  <!--     About        -->
     <section class="tab-hide about" data-tab="about">
@@ -72,10 +78,9 @@
 
 
     <!--  Scripts -->
-    <script type="text/javascript" src="./scripts/data.js"></script>
-    <script type="text/javascript" src="./vendor/jquery-3.2.1copy.js"></script>
-    <script type="text/javascript" src="./scripts/indexView.js"></script>
+    <script type="text/javascript" src="./vendor/scripts/jquery-3.2.1.js"></script>
+    <script src="/vendor/scripts/handlebars.js"></script>
     <script type="text/javascript" src="./scripts/constructor.js"></script>
-
+    <script type="text/javascript" src="./scripts/indexView.js"></script>
   </body>
 </html>
