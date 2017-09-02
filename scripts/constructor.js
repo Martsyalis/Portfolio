@@ -3,6 +3,10 @@
 
 Project.all = [];
 
+$(document).ready(function(){
+  Project.fetchAll();
+});
+
 
 function Project (dataArray) {
   this.title = dataArray.title;
@@ -18,25 +22,39 @@ function Project (dataArray) {
 Project.prototype.toScript = function() {
   var template = $( '#project-template' ).html();
   var templateFiller = Handlebars.compile( template );
-
-
   
-
-  var filledTemplate = templateFiller( this );
-
-  $('#home-projects' ).append( filledTemplate );
+  return templateFiller ( this );
 
 };
 
-dataArray.forEach(function (projectObject){
-  projectsArray.push(new Project(projectObject));
+Project.loadAll = function(dataArray){
+  dataArray.forEach(function(element) {
+    Project.all.push(new Project(element));
+  })
 
-});
+  Project.all.forEach(function(projectObject){
+    $('#home-projects').append(projectObject.toScript());
+
+  })
+}
 
 
-projectsArray.forEach(function (Project){
-  $('#home-projects').append(Project.toScript());
- 
+Project.fetchAll = function() {
+  if (localStorage.data) {
+    console.log("on local storage");
+    Project.loadAll(JSON.parse(localStorage.data));
 
-});
+  } else {
+    console.log( 'on JSON' );
+    $.getJSON( './scripts/data.json' )
+      .done (function ( data ){
+        localStorage.setItem ('data',JSON.stringify( data ) );
+        Project.loadAll ( data );
+      });
+  }
+}
+
+
+
+
 
