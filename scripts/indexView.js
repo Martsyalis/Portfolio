@@ -7,14 +7,12 @@ $(document).ready(function(){
   
   indexView.mainNav();
   indexView.primer();
-  indexView.scroll();
-
 
 });
 
 indexView.primer = function(){
   $('.about').hide();
-  $('.project-template').hide();
+  //$('.project-template').hide();
 };
 
 
@@ -33,17 +31,3 @@ indexView.mainNav = function(){
   });
 };
 
-//        NOT WORKING     
-
-indexView.scroll = function(){
-  $('generated-project').on('click','#id', function(){
-    var clicked = $(this);
-    var nextId = clicked.getParent().next().attr("id");
-    console.log(clicked);
-    console.log("nextId", nextId);
-
-    //clickTarget.attr('href', "'" + nextId +"'");
-
-  });
-
-};
