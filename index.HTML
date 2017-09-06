@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> My Portfolio </title>
-    <link rel="stylesheet" href="./vendor/styles/normalize.css">
+    <link rel="stylesheet" href="./styles/icons.css">
     <link rel="stylesheet" href="./styles/base.css">
     <link rel="stylesheet" href="./styles/layout.css">
     <link `href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> 
@@ -17,13 +17,17 @@
       <section class="project-template" id={{id}}>
         <a class="project-url" href="{{projectUrl}}">
           <img class="project-screenshot" src='{{screenShot}}' />
-          <div class="wrapper>">
+          <div class="wrapper">
               <div class="project-title">{{title}}</div>
               <div class="project-date">{{date}}</div>
               <div class="project-description">{{description}}</div>
           </div>
         </a>
-        <a class="next-button" href="#{{nextId}}">Next</a>
+        <div class="buttons">
+          <a class="up-button" href="#{{previousId}}"><span class="icon-arrow-circle-o-up"></span></a>
+          <a class="home-button" href=""><span class="icon-home"></span></a>
+          <a class="down-button" href="#{{nextId}}"><span class="icon-arrow-circle-o-down"></span></a>
+        </div>
       </section>
     </script>
 
@@ -55,6 +59,7 @@
           </div>
         </div>
       </section>
+      <a class="buttons" href="#1"><span class="icon-arrow-circle-o-down"></span></a>
     </section>       
       
 

@@ -1,9 +1,12 @@
 
 /*---------------------- Home ---------------- */
 
+
+
+
 .main {
-  margin-top: 3rem;
-  margin-bottom: 10rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   display: flex;
   height: 30rem;
   width: 100%;
@@ -36,52 +39,65 @@ justify-content: center;
 
 
 .project-template{
-  margin-top:20rem;
+  padding-top: 13rem;
   width: 100%;
 
 }
 
+.wrapper{
+  display: flex;
+  flex-direction: row;
+}
+.wrapper div{
+  padding-left: 0.5rem;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  margin-top: 1rem;
+}
+
+.icon-home {
+  font-size: 2.3rem; 
+  margin: 0 0.5rem;
+}
 
 
 /*---------------------- Navigation ---------------- */
 
 .main-nav {
   display: flex;
+  margin-top: 1rem;
   flex-direction: row;
-  justify-content: start;
+  justify-content: center;
   
 }
 
 .nav-ul {
   display: flex;
   flex-direction: row;  
-  justify-content: flex-start;
 }
 
 .nav-ul:hover {
 cursor: pointer;
 }
 
-.main-nav li {
-  display: inline-block;
-}
 
 .main-nav h3{
   padding: 0 5px;
 }
 
-.tab-div {
-  display: flex;
-  justify-content: flex-start;
-
-}
 
 
 
 /*---------------------- Footer ---------------- */
 
 footer {
-  margin-top:1000px;
+  margin-top: 15rem;
+  position: relative;
+  bottom: 1px;
 }
 
 footer p {

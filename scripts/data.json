@@ -1,6 +1,6 @@
 [
   {
-    "title" : "Motorcycle website",
+    "title" : "Motorcycle website 1",
     "date" : "08.26.2017",
     "screenShot": "./pics/sv.jpg",
     "id":0,
@@ -11,7 +11,7 @@
   } ,
 
   {
-    "title" : "Motorcycle website",
+    "title" : "Motorcycle website 2",
     "date" : "08.26.2017",
     "screenShot": "./pics/sv.jpg",
     "id":1,
@@ -21,7 +21,7 @@
   
 
   {
-    "title" : "Motorcycle website",
+    "title" : "Motorcycle website 3",
     "date" : "08.26.2017",
     "screenShot": "./pics/sv.jpg",
     "id":2,

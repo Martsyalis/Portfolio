@@ -16,6 +16,7 @@ function Project ( dataArray ) {
   this.description = dataArray.description;
   this.projectUrl = dataArray.projectUrl;
   this.nextId = dataArray.id +1;
+  this.previousId = dataArray.id -1;
 }
 
 
