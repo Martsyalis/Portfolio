@@ -6,12 +6,10 @@ var app = app || {};
   Project.all = [];
 
   function Project ( dataArray ) {
-    this.title = dataArray.title;
-    this.date = dataArray.date;
-    this.screenShot = dataArray.screenShot;
-    this.id = dataArray.id;
-    this.description = dataArray.description;
-    this.projectUrl = dataArray.projectUrl;
+
+    Object.keys(dataArray).forEach(function(key){
+      this[key]= dataArray[key];
+    },this);
     this.nextId = dataArray.id +1;
     this.previousId = dataArray.id -1;
   }
@@ -43,7 +41,7 @@ var app = app || {};
       console.log( 'on JSON' );
       $.getJSON( './scripts/data.json' )
         .done (function ( data ){
-          localStorage.setItem ('data',JSON.stringify( data ) );
+          //localStorage.setItem ('data',JSON.stringify( data ) );
           Project.loadAll ( data );
         });
     }

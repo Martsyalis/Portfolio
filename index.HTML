@@ -38,10 +38,10 @@
 
     <nav class="main-nav">
       <ul class="nav-ul">
-          <li> <h3 class ="tab" data-tab="home">Home</h3>
-          <li> <h3 class ="tab" data-tab="about">About</h3> </li>
-        <li> <h3><a href="social.html">Social</a></h3> </li>
-        <li> <h3><a href="#footer">GitHub</a></h3> </li>
+        <li> <h3><a href="/home">Home</a></h3>
+        <li> <h3><a href="/about">About</a></h3> </li>
+        <li> <h3><a href="">Social</a></h3> </li>
+        <li> <h3><a href="">GitHub</a></h3> </li>
       </ul>
     </nav>
 
@@ -59,7 +59,7 @@
           </div>
         </div>
       </section>
-      <a class="buttons" href="#1"><span class="icon-arrow-circle-o-down"></span></a>
+      <a class="buttons" href="#0"><span class="icon-arrow-circle-o-down"></span></a>
     </section>       
       
 
@@ -76,9 +76,15 @@
 
 
     <!--  Scripts -->
+
     <script type="text/javascript" src="./vendor/scripts/jquery-3.2.1.js"></script>
     <script src="/vendor/scripts/handlebars.js"></script>
+    <script src="/vendor/scripts/page.js"></script> 
     <script type="text/javascript" src="./scripts/constructor.js"></script>
     <script type="text/javascript" src="./scripts/indexView.js"></script>
+    <script src="/scripts/controllers/homeController.js"></script>
+    <script src="/scripts/controllers/aboutController.js"></script>
+    <script src="/scripts/controllers/routes.js"></script>
+    <script> app.indexView.primer(); </script>;
   </body>
 </html>
