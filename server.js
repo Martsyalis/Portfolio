@@ -8,9 +8,9 @@ require('dotenv').config();
 const requestProxy = require('express-request-proxy');
 const bodyParser = require('body-parser');
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static('.'));
+//app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({extended: true}));
+
 //const client = new pg.Client(process.env.DATABASE_URL);
 
 function getGithubProxy(request,response){
@@ -23,7 +23,7 @@ function getGithubProxy(request,response){
 
 app.get('/github/*', getGithubProxy);
 
-
+app.use(express.static('.'));
 
 
 app.listen(PORT, function(){
