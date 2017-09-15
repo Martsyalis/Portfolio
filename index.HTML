@@ -31,6 +31,21 @@
       </section>
     </script>
 
+          <!--            Github Template            -->
+    
+    <script id="github-template" data-type="home"  type="text/x-handlebars-template">
+      <li>
+        <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
+        <p>Description: {{description}}</p>
+        <p>Language: {{language}}</p>
+        <p>Created: {{created_at}}</p>
+        <p>Last updated: {{updated_at}}</p>
+      </li>
+  
+
+
+      
+
   </head>
   <body>
 
@@ -65,7 +80,8 @@
 
  <!--     About        -->
     <section class="tab-hide about" data-tab="about">
-      <p>Im Maryus</p>
+      <h1>Im Maryus</h1>
+      <ul id="github">
     </section>
 
 
@@ -77,14 +93,17 @@
 
     <!--  Scripts -->
 
-    <script type="text/javascript" src="./vendor/scripts/jquery-3.2.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="/vendor/scripts/handlebars.js"></script>
     <script src="/vendor/scripts/page.js"></script> 
-    <script type="text/javascript" src="./scripts/main.js"></script>
-    <script type="text/javascript" src="./scripts/indexView.js"></script>
+    <script src="/scripts/model/main.js"></script>
+    <script src="/scripts/model/repo.js"></script>
+    <script src="/scripts/view/indexView.js"></script>
+    <script src="/scripts/view/repoView.js"></script>
     <script src="/scripts/controllers/homeController.js"></script>
     <script src="/scripts/controllers/aboutController.js"></script>
     <script src="/scripts/controllers/routes.js"></script>
-    <script> app.indexView.primer(); </script>;
+    <script> app.indexView.primer(); </script>
+    <script> app.repos.requestRepos(app.repoView.Index)</script>
   </body>
 </html>
