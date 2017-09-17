@@ -9,7 +9,7 @@ app = app || {};
   const render = Handlebars.compile($('#github-template').text());
 
   repoView.index = function() {
-    $('#about ul').append(
+    $('#github').append(
       app.repos.map(render)
     );
   };
