@@ -9,8 +9,9 @@ app = app || {};
   const render = Handlebars.compile($('#github-template').text());
 
   repoView.index = function() {
+    console.log ("repoView running")
     $('#github').append(
-      app.repos.map(render)
+      app.repos.with('name').map(render)
     );
   };
 

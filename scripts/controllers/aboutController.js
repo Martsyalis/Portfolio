@@ -7,6 +7,7 @@
     console.log("aboutController")
     $('.tab-hide').hide();
     $('.about').fadeIn('slow');
+    
   }
 
   module.aboutController = aboutController

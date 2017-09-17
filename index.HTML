@@ -80,7 +80,7 @@
  <!--     About        -->
     <section class="tab-hide about" data-tab="about">
       <h1>Im Maryus</h1>
-      <ul id="github">
+      <ul id="github"></ul>
     </section>
 
 
@@ -102,7 +102,7 @@
     <script src="/scripts/controllers/homeController.js"></script>
     <script src="/scripts/controllers/aboutController.js"></script>
     <script src="/scripts/controllers/routes.js"></script>
-    <script> app.indexView.primer(); </script>
-    <script> app.repos.requestRepos(app.repoView.Index)</script>
+    <script> console.log ("indexView"), app.indexView.primer(); </script>
+    <script> console.log ("repos index"), app.repos.requestRepos(app.repoView.Index)</script>
   </body>
 </html>

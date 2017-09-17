@@ -1,6 +1,7 @@
 # Created by https://www.gitignore.io/api/osx,linux,node,vim
 
 .vscode
+.env
 
 ### OSX ###
 .DS_Store
@@ -65,3 +66,4 @@ Session.vim
 # auto-generated tag files
 tags
 .env
+*.env
