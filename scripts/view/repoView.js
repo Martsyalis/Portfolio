@@ -11,7 +11,7 @@ app = app || {};
   repoView.index = function() {
     console.log ("repoView running")
     $('#github').append(
-      app.repos.with('name').map(render)
+      app.repos.with('description').map(render)
     );
   };
 

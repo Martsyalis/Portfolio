@@ -64,6 +64,18 @@ justify-content: center;
   margin: 0 0.5rem;
 }
 
+/*---------------------- Navigation ---------------- */
+#github {
+display: flex;
+justify-content: space-around;
+flex-direction: column;
+}
+
+.about li {
+padding-top: 5rem;
+}
+
+
 
 /*---------------------- Navigation ---------------- */
 
