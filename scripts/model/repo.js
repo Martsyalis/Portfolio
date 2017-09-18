@@ -9,16 +9,23 @@ var app = app || {};
 
 
   repos.requestRepos = function(callback){
+    console.log("requestRepos is running")
+   
+    $.ajax({
+      url: '/github/user/repos',
+      type: "GET"
+    })
+      
+      .then(data => repos.all = data)
+      
+      .then(callback)
+      .then(console.log(app.repos.all))
+  };
 
-    $.get('/github/user/repos')
-      .then (function(data){
-        repos.all = data
-      })
-      .then (callback)
-
-
-  }
-
-
+  repos.with = attr => repos.all.filter(repo => repo[attr]);
   module.repos = repos;
-})(app)
+})(app);
+
+$(document).ready(function(){
+  app.repos.requestRepos(app.repoView.Index);
+});
